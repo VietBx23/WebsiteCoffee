@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FC GOOD</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'> 
+</head>
+<script src="js/slideshowImages.js">
+</script>
+<script src="/js/oder.js"></script>
+
+
+<body>
+    <div class=" boxcenter">
+        <div id="menu">
+            <img src="images/logo.png" alt="">
+            <ul>
+                <li><a href="#"> <i class='bx bx-home-alt'></i>Trang Chủ </a></li>
+                <li>
+                    <a href="#">Giới Thiệu</a>
+
+                </li>
+                <li>
+                    <a href="#">Menu</a>
+                </li>
+                <li>
+                    <a href="#">Sản Phẩm<i class='bx bxs-down-arrow'></i></a>
+                    <ul>
+                        <li><a href="#"> Cà Phê Gói</a></li>
+                        <li><a href="#"> Cà Phê Thùng</a></li>
+                        <li><a href="#"> Nguyên Vật Liệu</a></li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#"> Hệ Thống <i class='bx bx-phone-call'></i></a>
+
+                </li>
+                <li><a href="#">Tản Mạn</a></li>
+                <li><a href="#">Tin Tức</a></li>
+                <li><a href="#">Liên Hệ</a></li>
+                <li><a href="#">Đăng Nhập</a></li>
+                <li><a href="page/formDangKy.html">Đăng Ký</a></li>
+                <input style="width:10%" type="text" />
+                <input type="submit" value="Tìm kiếm" />
+
+            </ul>
+        </div>
+        <div class="header">
+            <div class="left">
+                <button onclick="pre()">
+                    Prev </button>
+            </div>
+            <div class="center">
+                <img src="images/header.png" alt="" id="view">
+                <iframe id="view" src="" frameborder="0" style="width:100%"></iframe>
+            </div>
+            <div class="right">
+                <button style="margin-top: 350px;" onclick="next()"> Next </button>
+            </div>
+        </div>
+        <div id="dem" class="count" >
+            <script>
+                document.getElementById("dem").innerHTML = "Ảnh"+" "+ (index+1 )+ "/" + hinh.length;
+            </script>
+        </div>
+        
+        <div class="container">
+            <select  id="mucgia" onchange="doimucgia()">
+                <option value="-1"> Chọn Mức Giá</option>
+                <option value="20.000"> 0 Đến 20.000 VNĐ</option>
+                <option value="25.000">0 Đến 25.000 VNĐ</option>
+                <option value="30.000"> 0 Đến 30.000 VNĐ</option>
+                <option value="40.000"> 0 Đến 40.000 VNĐ</option>
+            </select>
+            <table border="1" id="table-SP">
+                <tr>
+                    <th colspan="2"> Hàng Hóa</th>
+                    <th> Đơn Giá</th>
+                    <th> Số Lượng</th>
+                    <th> Thành Tiền</th>
+                </tr>
+                <tr>
+                    <td> <input onclick="tich1checkbox(0)" type="checkbox"  name="chon"></td>
+                    <td>Cà Phê Đen</td>
+                    <td name="gia">18.000</td>
+                    <td><input  onkeyup="thanhtien(this)" value="0" name="soluong" disabled></td>
+                    <td name="thanhtien"></td>
+                </tr>
+                <tr>
+                    <td> <input  onclick="tich1checkbox(1)" type="checkbox"  name="chon"></td>
+                    <td>Cà Phê Sữa</td>
+                    <td name="gia">23.000</td>
+                    <td><input onkeyup="thanhtien(this)" value="0" name="soluong" disabled></td>
+                    <td name="thanhtien"></td>
+                </tr>
+                <tr>
+                    <td> <input  onclick="tich1checkbox(2)" type="checkbox"  name="chon"></td>
+                    <td>Cà Phê Kem</td>
+                    <td name="gia">30.000</td>
+                    <td><input onkeyup="thanhtien(this)" value="0" name="soluong" disabled></td>
+                    <td name="thanhtien"></td>
+                </tr>
+                <tr>
+                    <td> <input   onclick="tich1checkbox(3)"type="checkbox"  name="chon"></td>
+                    <td>Cà Phê Expreso</td>
+                    <td name="gia">30.300</td>
+                    <td><input onkeyup="thanhtien(this)" value="0" name="soluong" disabled></td>
+                    <td name="thanhtien"></td>
+                </tr>
+                <tr>
+                    <td> <input  onclick="tich1checkbox(4)"type="checkbox"  name="chon"></td>
+                    <td>MatCha Socola</td>
+                    <td name="gia">40.000</td>
+                    <td><input onkeyup="thanhtien(this)" value="0" name="soluong" disabled></td>
+                    <td name="thanhtien"></td>
+                </tr>
+                <tr>
+                    <td> <input  onclick="tich1checkbox(5)"type="checkbox"  name="chon"></td>
+                    <td>Nước Ép Cà Chua</td>
+                    <td name="gia">18.000</td>
+                    <td><input  onkeyup="thanhtien(this)" value="0" name="soluong" disabled></td>
+                    <td name="thanhtien"></td>
+                </tr>
+                <tr>
+                    <td> <input onclick="tich1checkbox(6)" type="checkbox"  name="chon"></td>
+                    <td>SoDa Chanh</td>
+                    <td name="gia">23.000</td>
+                    <td><input onkeyup="thanhtien(this)" value="0" name="soluong" disabled></td>
+                    <td name="thanhtien"></td>
+                </tr>
+                <tr>
+                    <td> <input onclick="tich1checkbox(7)" type="checkbox"  name="chon"></td>
+                    <td>SoDa Việt Quốc</td>
+                    <td name="gia">30.000</td>
+                    <td><input onkeyup="thanhtien(this)" value="0" name="soluong" disabled></td>
+                    <td name="thanhtien"></td>
+                </tr>
+                <tr>
+                    <td> <input onclick="tich1checkbox(8)" type="checkbox"  name="chon"></td>
+                    <td>SoDa Mojito</td>
+                    <td name="gia">33.000</td>
+                    <td><input onkeyup="thanhtien(this)" value="0" name="soluong" disabled></td>
+                    <td name="thanhtien"></td>
+                </tr>
+                <tr>
+                    <td> <input onclick="tich1checkbox(9)" type="checkbox"  name="chon"></td>
+                    <td>Trà Đào</td>
+                    <td name="gia">39.000</td>
+                    <td><input onkeyup="thanhtien(this)" value="0" name="soluong" disabled></td>
+                    <td name="thanhtien"></td>
+                </tr>
+                <tr>
+                    <td> <input onclick="tich1checkbox(10)" type="checkbox"  name="chon"></td>
+                    <td>Trà Hoa Cúc</td>
+                    <td name="gia">18.000</td>
+                    <td><input onkeyup="thanhtien(this)" value="0" name="soluong" disabled></td>
+                    <td name="thanhtien"></td>
+                </tr>
+                <tr>
+                    <td> <input onclick="tich1checkbox(11)" type="checkbox"  name="chon"></td>
+                    <td>Sinh Tố</td>
+                    <td name="gia">23.000</td>
+                    <td><input onkeyup="thanhtien(this)" value="0" name="soluong" disabled></td>
+                    <td name="thanhtien"></td>
+                </tr>
+                <tr class="tong">
+                    <th colspan="4"> Tổng </th>
+                    <td id="tinhtong"> <b>0</b></td>
+                </tr>
+            </table>
+        </div>
+        <div class="sanpham">
+            <h1> Các Sản Phẩm </h1>
+            <div class="sp1">
+                <a href="#"> <img src="images/sp1.jpg" alt=""></a> <br>
+                <a href="#">
+                    <h3>Cà Phê Đen</h3>
+                </a>
+                <a href="#">
+                    <p> 18,000VND</p>
+                </a>
+            </div>
+            <div class="sp1">
+                <a href="#"><img src="images/sp2.jpg" alt=""></a>
+                <a href="#">
+                    <h3>Cà Phê Sữa</h3>
+                </a>
+                <a href="#">
+                    <p>23,000VND</p>
+                </a>
+            </div>
+            <div class="sp1">
+                <a href="#"><img src="images/sp3.jpg" alt=""></a>
+                <a href="#">
+                    <h3>Cà Phê Kem</h3>
+                </a>
+                <a href="#">
+                    <p>30,000VND</p>
+                </a>
+            </div>
+            <div class="sp1">
+                <a href="#"><img src="images/sp4.jpg" alt=""></a>
+                <a href="#">
+                    <h3>Cà Phê Expresso</h3>
+                </a>
+                <a href="#">
+                    <p>30,300VND</p>
+                </a>
+            </div>
+            <div class="sp1">
+                <a href="#"><img src="images/sp5.jpg" alt=""></a>
+                <a href="#">
+                    <h3>MatCha Socola</h3>
+                </a>
+                <a href="#">
+                    <p>39,000VND</p>
+                </a>
+            </div>
+        </div>
+        <div class="sanpham">
+            <div class="sp1">
+                <a href="#"> <img src="images/sp6.jpg" alt=""></a> <br>
+                <a href="#">
+                    <h3>Nước Ép Cà Chua</h3>
+                </a>
+                <a href="#">
+                    <p> 18,000VND</p>
+                </a>
+            </div>
+            <div class="sp1">
+                <a href="#"><img src="images/sp7.jpg" alt=""></a>
+                <a href="#">
+                    <h3>SoDa Chanh</h3>
+                </a>
+                <a href="#">
+                    <p>23,000VND</p>
+                </a>
+            </div>
+            <div class="sp1">
+                <a href="#"><img src="images/sp8.jpg" alt=""></a>
+                <a href="#">
+                    <h3>SoDa Việt Quốc</h3>
+                </a>
+                <a href="#">
+                    <p>30,000VND</p>
+                </a>
+            </div>
+            <div class="sp1">
+                <a href="#"><img src="images/sp9.jpg" alt=""></a>
+                <a href="#">
+                    <h3>SoDa Mojito</h3>
+                </a>
+                <a href="#">
+                    <p>30,300VND</p>
+                </a>
+            </div>
+            <div class="sp1">
+                <a href="#"><img src="images/sp10.jpg" alt=""></a>
+                <a href="#">
+                    <h3>Trà Đào</h3>
+                </a>
+                <a href="#">
+                    <p>39,000VND</p>
+                </a>
+            </div>
+        </div>
+        <div class="sanpham">
+            <div class="sp1">
+                <a href="#"> <img src="images/sp11.jpg" alt=""></a> <br>
+                <a href="#">
+                    <h3>Trà Hoa Cúc</h3>
+                </a>
+                <a href="#">
+                    <p> 18,000VND</p>
+                </a>
+            </div>
+            <div class="sp1">
+                <a href="#"><img src="images/sp12.jpg" alt=""></a>
+                <a href="#">
+                    <h3>Sinh Tố </h3>
+                </a>
+                <a href="#">
+                    <p>23,000VND</p>
+                </a>
+            </div>
+        </div>
+        
+        <div class="me">
+            <div class="me_left">
+                <img src="/images/veChungToi.jpg" alt="">
+            </div>
+            <div class="me_right">
+                <h1> Về Chúng Tôi</h1> <br>
+                <hr>
+                <p>
+                    FC Good Coffee có mặt trên thị trường đã được 8 năm. Trên thực tế, Chúng tôi đã bắt đầu nghiên cứu về " Cà Phê Sạch" từ thập niên 90 của thế kỷ trước, và được được hơn 20 năm 
+                    <br>
+                    Tuy nhiên vào thời điểm đó, việc đưa sản phẩn "Cà Phê Sạch" ra thị trường gặp rất nhiều khó khăn. Khi đó, sau thời kỳ bao cấp quá dài, cà phê bắp, đậu nành ... Chiếm lĩnh hầu hết thị trường, dẫn đến khẩu vị cà phê có nhiều lệch lạc. <br>
+                    Vì vậy " Cà Phê Sạch " của FC GOOD COFFEE của chúng tôi gặp rất nhiều khó khăn trắc trờ khi đưa sản phẩm ra thị trường lúc đó. 
+                    <br>
+                    Chúng tôi tiếp tục hoàn thiện công nghệ chế biến cà phê của mình để đạt được sự tối ưu. Đồng thời chúng tôi triển khai việc tiếp cận bền vững mang tính ổn định đến nguồn cung cấp cà phê. Từ khâu gieo trồng đến khi thu hoạch, du trì mối quan hệ trực tiếp đến người sản xuất để được đảm bảo chất lượng. <br>
+                    Sau khi hoàn thành các chỉ tiêu đề ra, chúng tôi bắt đầu xâm nhập thị trường và đã có kết quả như ngày hôm nay
+                </p>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="trai">
+                <h2> FC GOOD COFFEE</h2> <br> <br>
+                <h3>Công Ty TNHH AAA VIỆT NAM</h3> <br>
+                <p>GPKD số 031277867 do Sở KH và ĐT TP Hồ Chí Minh cấp ngày 15/05/2014 </p> <br>
+                <h3>Trụ sở 1: 1F Phạm Đăng Giảng, Phường Bình Hưng Hoà, Bình Tân, Thành phố Hồ Chí Minh </h3> <br>
+                <h3>Trụ sở 2: 1A Đồng Nai, Phường 15, Quận 10, Thành phố Hồ Chí Minh </h3> <br>
+                <h3>0949 999 007 – 0906 850 257 </h3> <br>
+                <h3> fcgoodcoffee@gmail.com</h3> <br>
+                <h3>https://fcgoodcoffee.vn</h3> <br>
+            </div>
+            <div class="phai">
+                <h2>Chính Sách</h2> <br> <br>
+                <h3><a href="#">Chính Sách Thanh Toán</a></h3> <br>
+                <h3><a href="#">Chính Sách Bảo Hành</a></h3> <br>
+                <h3><a href="#">Chính Sách Vận Chuyển</a></h3> <br>
+                <h3><a href="#">Chính Sách Kiểm Hàng</a></h3> <br>
+                <h3><a href="#">Chính Sách Đổi Trả</a></h3> <br>
+                <h3><a href="#">Chính Sách Xử Lý Khiếu Nại</a></h3> <br>
+                <h3><a href="#">Chính Sách Bảo Mật Thông Tin</a></h3> <br>
+            </div>
+            <div class="maps">
+                <h2>Kết Nối Với Chúng Tôi</h2>
+                <br> <br>
+                <a href="https://www.google.com/maps/place/1f+%C4%90%C6%B0%E1%BB%9Dng+Ph%E1%BA%A1m+%C4%90%C4%83ng+Gi%E1%BA%A3ng,+B%C3%ACnh+H%C6%B0ng+Ho%C3%A0,+B%C3%ACnh+T%C3%A2n,+Th%C3%A0nh+ph%E1%BB%91+H%E1%BB%93+Ch%C3%AD+Minh,+Vi%E1%BB%87t+Nam/@10.8217898,106.6010715,15z/data=!4m5!3m4!1s0x31752bc7486992ff:0xc7ad6a81e6a7f9d3!8m2!3d10.8221273!4d106.6069082?hl=vi"> <img src="/images/maps.png" alt=""></a>
+            </div>
+            <div class="button">
+                <h3>
+                    Copyright 2022 © FC Good Coffe
+                </h3>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+body{
+    /* background-image: url('/images/phongnen3.jpeg'); */
+    background-attachment: fixed;
+    width: 100%;
+}
+.boxcenter{
+    width: 65%;
+    margin: auto;
+    background-image: url('/images/phongnen1.jpg');
+}
+*{
+    box-sizing: border-box;
+}
+.boxcenter h1{
+    text-align: center;
+    color:rgb(5, 48, 41);
+}
+label{
+color:rgb(2, 24, 23); font-size: large; font-weight: bolder;
+}
+form input{
+    border-radius: 10px;
+    margin-left: 10px;
+}
+#name-empty,#email-empty,#ma-empty,#gioitinh-empty,#hobbies-empty,#option-empty,#note-empty,#note1-empty,#ma-check,#name-check,#email-check{
+    display: none;
+    color: red;
+}
+body{
+width:65%;
+margin: auto;
+margin-top: 50px;
+}

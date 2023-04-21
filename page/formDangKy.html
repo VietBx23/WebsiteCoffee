@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/formDangKy.css">
+    <script src="/js/formDangKy.js">
+    </script>
+</head>
+
+<body>
+    <div class="boxcenter">
+        <h1> Form Đăng Ký</h1>
+        <form action="https://www.w3schools.com/" method="post" onsubmit="return check()";>
+            <p>
+                <label> Mã Sinh Viên :</label> <br>
+                <input type="text" id="ma" class="" style="width:80%; height:35px;">
+            </p>
+            <i id="ma-empty"></i>
+            <p>
+                <label for="">Họ Và Tên</label> <br>
+                <input type="text" id="name" name="name" style="width:80%; height:35px;">
+            </p>
+            <i id="name-empty"></i>
+            <i id="name-check"> </i>
+            <p>
+                <label>Email</label> <br>
+                <input type="text" id="email" name="addres" style="width:80%; height:35px;">
+            </p><i id="email-empty"></i>
+            <p>
+                <label>Giới Tính</label>
+                <label><input type="radio" name="gender"> Nam </label>
+                <label> <input type="radio" name="gender"> Nữ</label>
+            </p>
+            <i id="gioitinh-empty"></i>
+            <p>
+                <label>Sở Thích</label> <br>
+                <label><input type="checkbox" value="Đọc Sách" name="hobbies">Đọc Sách</label>
+                <label><input type="checkbox" value="Xem Phim" name="hobbies">Xem Phim</label>
+                <label><input type="checkbox" value="Nghe Nhạc" name="hobbies">Nghe Nhạc</label>
+                <label><input type="checkbox" value="May Vá" name="hobbies">May Vá</label>
+                <label><input type="checkbox" value="Đá Bóng" name="hobbies">Đá Bóng</label>
+                <label><input type="checkbox" name="hobbies" onclick="hien_thi(checked)">Khác</label>
+            </p>
+            <p id="other_hobbies" style="display: none;">
+                <label for="">Sở Thích Khác</label> <br>
+                <input type="text" style="width:80%; height:35px;">
+            </p>
+            <i id="hobbies-empty"></i>
+            <p>
+                <label for="#">Quốc Tịch:</label>
+                <select type="'text" name="" id="option" name="option">
+                    <option value="">Chọn Quốc Tịch</option>
+                    <option value="1">VietNam</option>
+                    <option value="1">United States</option>
+                    <option value="1">Korea</option>
+                    <option value="1">Japan</option>
+                    <option value="1">Germany</option>
+                </select>
+            </p>
+            <i id="option-empty"></i>
+            <p>
+                <label for="#">Ghi chú: </label> <br>
+                <textarea style="width:60%; height:100px;" name="" id="note" cols="20" rows="4"
+                    class="width"></textarea>
+            </p>
+            <i id="note-empty"></i>
+            <p>
+                <input type="submit" value="send" name="Submit">
+                <input type="reset" value="Reset" name="Reset">
+            </p>
+
+        </form>
+    </div>
+
+
+</body>
+
+</html>
